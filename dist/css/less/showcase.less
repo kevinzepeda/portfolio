@@ -1,0 +1,478 @@
+/*------------------------------------------------------------------
+[Table of contents]
+SHOWCASE, ABOUT US, SERVICES PAGE STYLES
+
+1. Modified styles
+2. Team section
+3. Subscribe section
+4. Services page
+5. FAQ
+-------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------------
+1. Modified styles
+-----------------------------------------------------------------------------------*/
+.showcase {
+    
+    .top_panel .logo {
+        background-image: url(../img/logo-black.svg);
+    }
+    
+    .page--head .title {
+        font-size: 45px;
+        color: #191919;
+    }
+    
+    .tabs-section {
+        padding-top: 0;
+        padding-bottom: 86px;
+        
+        .tabs {
+            margin-bottom: 0;
+        }
+        
+        .mobile-select {
+            position: relative;
+            width: auto;
+            display: none;
+            
+            .value {
+                position: relative;
+                padding-left: 40px;
+                line-height: 30px;
+                width: auto;
+                
+                &:before {
+                    width: 30px;
+                    height: 30px;
+                    background: url(../img/select-arrow.svg) center center no-repeat;
+                    background-size: contain;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                
+                span {
+                    font-size: 22px;
+                    font-weight: 600;
+                    color: #191919;
+                    border-bottom: 2px solid #191919;
+                    display: inline-block;
+                    float: none;
+                }
+            }
+            
+            select {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+    }
+    
+    .portfolio {
+        .portfolio-block {
+            display: none;
+        }
+    }
+    
+    .link {
+            position: relative;
+            color: #191919;
+            font-size: 17px;
+            font-weight: 500;
+            display: block;
+            float: left;
+            margin-top: 80px;
+            
+            & > span {
+                padding-left: 130px;
+                position: relative;
+                
+                span.link-text {
+                    opacity: 0;
+                    margin-left: 8px;
+                    transition: all .2s ease-out;
+                }
+                
+                &:before {
+                    width: 116px;
+                    height: 8px;
+                    background: url(../img/arrow-black.svg) center center no-repeat;
+                    background-size: contain;
+                    content: '';
+                    left: 0;
+                    top: 50%;
+                    margin-top: -4px;
+                    position: absolute;
+                }
+            }
+        }
+    
+    .statistics-section {
+        padding: 150px 0;
+    }
+}
+
+
+/*----------------------------------------------------------------------------------
+2. Team section
+-----------------------------------------------------------------------------------*/
+.team {
+    padding: 150px 0 100px;
+    
+    .item {
+        width: 50%;
+        margin-bottom: 50px;
+        
+        &:hover {
+            .socials-user {
+                
+                &:before {
+                    opacity: .44;
+                    transition: all .2s linear;
+                }
+                
+                a {
+                    transform: none;
+                    transition: all .4s ease;
+                }
+            }
+        }
+        
+        .socials-user {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            a {
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                float: none;
+                position: relative;
+                margin: 0 14px;
+                transform: translateY(500px);
+                transition: all .4s ease;
+                
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    content: '';
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                
+                &.instagram {
+                    &:before {
+                        width: 24px;
+                        height: 24px;
+                        background-image: url(../img/instagram.svg);
+                        margin-top: -12px;
+                        margin-left: -12px;
+                    }
+                }
+                
+                &.twitter {
+                    &:before {
+                        width: 24px;
+                        height: 20px;
+                        background-image: url(../img/twitter.svg);
+                        margin-top: -10px;
+                        margin-left: -12px;
+                    }
+                }
+                
+                &.behance {
+                    &:before {
+                        width: 28px;
+                        height: 18px;
+                        background-image: url(../img/behance-logo.svg);
+                        margin-top: -9px;
+                        margin-left: -14px;
+                    }
+                }
+            }
+            
+            &:before {
+                position: absolute;
+                background: #000;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                transition: all .2s linear;
+                opacity: 0;
+            }
+        }
+        
+        &_img {
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            
+            .sq_parent {
+                width: 100%;
+                position: relative;
+                padding-bottom: 86%;
+                overflow: hidden;
+                
+                .sq_wrap {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    
+                    .sq_content {
+                        float: left;
+                        width: 100%;
+                        height: 100%;
+                        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &_name {
+            font-size: 28px;
+            color: #191919;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        &_position {
+            font-size: 17px;
+            color: #8C8C8C;
+        }
+    }
+    
+    .title {
+        font-size: 45px;
+        color: #191919;
+        font-weight: 600;
+        margin-bottom: 27px;
+    }
+    
+    .subtitle {
+        font-size: 22px;
+        color: #8C8C8C;
+        max-width: 530px;
+        line-height: 1.5;
+        margin-bottom: 60px;
+    }
+}
+
+
+/*----------------------------------------------------------------------------------
+3. Subscribe section
+-----------------------------------------------------------------------------------*/
+.subscribe {
+    background: #191919;
+    padding: 150px 0;
+    
+    .wrap_float {
+        max-width: 730px;
+    }
+    
+    .title {
+        font-size: 45px;
+        color: #fff;
+        font-weight: 600;
+        max-width: 350px;
+        margin-bottom: 80px;
+    }
+    
+    .input_wrap {
+        position: relative;
+        margin-bottom: 85px;
+        
+        &:before {
+            height: 3px;
+            width: 0;
+            left: 50%;
+            right: 50%;
+            background: #fff;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            transition: all .2s linear;
+        }
+        
+        &.focus {
+            &:before {
+                left: 0;
+                right: 0;
+                width: auto;
+                transition: all .2s linear;
+            }
+        }
+    }
+    
+    .input {
+        border: 0;
+        background: none;
+        display: block;
+        width: 100%;
+        border-bottom: 3px solid #525252;
+        font-size: 17px;
+        padding: 0 20px;
+        height: 50px;
+        
+        color: #fff;
+        font-weight: 500;
+    }
+    
+    .btn {
+        background: #fff;
+        width: 194px;
+        height: 54px;
+        
+        &.onclic {
+            background: none !important;
+        }
+        
+        span:not(.text) {
+            background: #eee;
+        }
+        
+        .text {
+            color: #191919;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+/*----------------------------------------------------------------------------------
+4. Services page
+-----------------------------------------------------------------------------------*/
+.services-page {
+    
+    .varieties {
+        background: #F4F4F4;
+    }
+    
+    .varieties .col {
+        margin-top: 150px;
+        
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            margin-top: 0;
+        }
+    }
+}
+
+.services-page,
+.about-page {
+    .contacts-form {
+        background: #F4F4F4;
+        
+        .form .input,
+        .form .textarea {
+            background: none;
+        }
+        
+        .onclic {
+            background: #F4F4F4 !important;
+        }
+    }
+}
+
+
+/*----------------------------------------------------------------------------------
+5. FAQ
+-----------------------------------------------------------------------------------*/
+.faq {
+    padding: 150px 0;
+    
+    .text {
+        font-size: 45px;
+        font-weight: 600;
+        color: #8C8C8C;
+        line-height: 1.2;
+        margin-bottom: 80px;
+        
+        b, strong {
+            color: #191919;
+        }
+    }
+    
+    &_item {
+        margin-bottom: 25px;
+        
+        &.active {
+            .faq_item_question {
+                background: rgba(229, 229, 229, .3);
+                transition: all .2s linear;
+                
+                &:before {
+                    transform: rotate(180deg);
+                    transition: all .2s linear;
+                }
+            }
+        }
+        
+        &_question {
+            height: 86px;
+            background: #E5E5E5;
+            font-size: 17px;
+            color: #191919;
+            padding: 0 50px;
+            padding-right: 100px;
+            position: relative;
+            transition: all .2s linear;
+            
+            &:hover {
+                cursor: pointer;
+            }
+            
+            &:before {
+                width: 30px;
+                height: 30px;
+                background: url(../img/faq-arrow.svg) center center no-repeat;
+                background-size: contain;
+                position: absolute;
+                content: '';
+                top: 50%;
+                margin-top: -15px;
+                right: 50px;
+                transition: all .2s linear;
+            }
+            
+            span {
+                height: inherit;
+                display: table-cell;
+                vertical-align: middle;
+                float: none;
+            }
+        }
+        
+        &_answer {
+            font-size: 17px;
+            color: #8C8C8C;
+            line-height: 1.8;
+            padding: 40px 50px 60px;
+            display: none;
+        }
+    }
+}
