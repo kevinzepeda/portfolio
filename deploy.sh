@@ -2,8 +2,6 @@
 echo -n "Changes to commit: "
 read commit
 if [ -n "$commit" ]; then
-yarn build
-yarn generate
 git add .
 git commit -m "$commit"
 git push
@@ -13,6 +11,3 @@ else
 echo "Need changes to commit"
 exit 1
 fi
-
-
-
